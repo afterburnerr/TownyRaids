@@ -1,5 +1,10 @@
 # TownyRaids
 
+[![Build](https://github.com/afterburnerr/TownyRaids/actions/workflows/build.yml/badge.svg)](https://github.com/afterburnerr/TownyRaids/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Paper](https://img.shields.io/badge/Paper-1.21.4-yellow.svg)](https://papermc.io)
+[![Towny](https://img.shields.io/badge/Towny-0.102.0.14-orange.svg)](https://github.com/TownyAdvanced/Towny)
+
 A Paper plugin that adds a full raid system to [Towny Advanced](https://github.com/TownyAdvanced/Towny). Players can declare raids between towns, go through preparation and battle phases, pay or demand tribute, and admins get a complete toolbox through `/ta raids`.
 
 Tested against Paper `1.21.4` and Towny `0.102.0.14`.
