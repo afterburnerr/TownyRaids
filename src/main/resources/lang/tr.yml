@@ -1,0 +1,75 @@
+prefix: "<dark_gray>[<gradient:#ff5e00:#ffbb00>TownyRaids</gradient><dark_gray>]</dark_gray> "
+
+generic:
+  no-permission: "<prefix><red>Bunu yapmak için yetkin yok."
+  must-be-player: "<prefix><red>Bu komutu yalnızca oyuncular kullanabilir."
+  must-have-town: "<prefix><red>Bu komutu kullanmak için bir kasabaya ait olmalısın."
+  must-be-mayor-or-assistant: "<prefix><red>Bu komutu yalnızca başkan veya yardımcısı kullanabilir."
+  rate-limited: "<prefix><red>Komutu tekrar kullanmadan önce bekle."
+  unknown-town: "<prefix><red><white><town></white> adlı kasaba yok."
+  same-town: "<prefix><red>Kendi kasabana baskın düzenleyemezsin."
+  reloaded: "<prefix><green>Yapılandırma yeniden yüklendi."
+  reload-failed: "<prefix><red>Yeniden yükleme başarısız: <reason>"
+
+raid:
+  confirmation-title: "<white><defender></white> kasabasına baskın düzenlensin mi?"
+  confirmation-sent: "<prefix><yellow>Onay isteği gönderildi. <seconds>s içinde /confirm veya /cancel yaz."
+  already-active: "<prefix><red>Kasabalardan biri zaten bir baskında."
+  attacker-on-cooldown: "<prefix><red>Kasaban <time> süresince baskın bekleme süresinde."
+  defender-protected: "<prefix><red><white><defender></white> kasabası <time> süresince korunmakta."
+  defender-too-small: "<prefix><red><white><defender></white> kasabasında yeterli sakin yok."
+  attacker-too-small: "<prefix><red>Kasabanın baskın düzenlemek için yeterli sakini yok."
+  same-nation: "<prefix><red>Aynı millete ait bir kasabaya baskın düzenleyemezsin."
+  declared-broadcast: "<prefix><red><bold>BASKIN:</bold></red> <gold><attacker></gold>, <gold><defender></gold> kasabasına baskın ilan etti!"
+  preparation-title-attacker:
+    title: "<red>Baskın ilan edildi"
+    subtitle: "<gray>Hedef: <white><defender></white>"
+  preparation-title-defender:
+    title: "<red>Baskın altında"
+    subtitle: "<gray>Saldırgan: <white><attacker></white>"
+  preparation-bossbar: "<yellow>Hazırlık: savaş başlamasına <white><time></white>"
+  battle-bossbar: "<red>Savaş: <white><time></white> kaldı"
+  battle-started-broadcast: "<prefix><red><gold><attacker></gold> ile <gold><defender></gold> arasındaki savaş başladı!"
+  battle-ended-title:
+    title: "<green>Baskın sona erdi"
+    subtitle: "<gray><attacker></gray> - <gray><defender></gray>"
+  battle-ended-broadcast: "<prefix><green><gold><attacker></gold> ile <gold><defender></gold> arasındaki baskın sona erdi."
+  cancelled-broadcast: "<prefix><yellow><gold><attacker></gold> ile <gold><defender></gold> arasındaki baskın iptal edildi."
+  cancelled-title: "<yellow>Baskın iptal edildi"
+  not-cancellable-now: "<prefix><red>Baskın artık iptal edilemez."
+  no-active-raid: "<prefix><red>Kasabanın iptal edilecek aktif bir baskını yok."
+  help:
+    header: "<prefix><gold>Baskın komutları:"
+    declare: "<gray>/t raid <town> <white>- Bir kasabaya baskın ilan et."
+    cancel: "<gray>/t raid cancel <white>- Hazırlık sırasında baskını iptal et."
+
+tribute:
+  usage: "<prefix><yellow>/t tribute request <amount> | /t tribute accept | /t tribute deny"
+  disabled: "<prefix><red>Haraç sistemi bu sunucuda kapalı."
+  only-attacker-request: "<prefix><red>Haraç yalnızca saldıran kasaba tarafından istenebilir."
+  only-defender-answer: "<prefix><red>Haraç isteğine yalnızca savunan kasaba cevap verebilir."
+  no-active-raid: "<prefix><red>Kasabanla bağlantılı aktif bir baskın yok."
+  raid-not-pending: "<prefix><red>Haraç yalnızca hazırlık aşamasında istenebilir."
+  amount-too-low: "<prefix><red>Haraç en az <white><amount></white> olmalı."
+  amount-too-high: "<prefix><red>Haraç <white><amount></white> değerini aşamaz."
+  invalid-amount: "<prefix><red>Geçersiz miktar."
+  already-pending: "<prefix><red>Bekleyen bir haraç isteği var."
+  request-sent: "<prefix><green><white><amount></white> değerinde haraç isteği <white><defender></white> kasabasına gönderildi."
+  request-received: "<prefix><gold><attacker></gold>, <white><amount></white> haraç talep ediyor. /t tribute accept veya /t tribute deny kullan."
+  no-pending: "<prefix><red>Bekleyen bir haraç isteği yok."
+  insufficient-funds: "<prefix><red>Kasabanın hazinesinde yeterli para yok."
+  accepted: "<prefix><green><white><amount></white> haraç <attacker> kasabasına ödendi. Baskın iptal edildi."
+  denied: "<prefix><yellow>Haraç isteği reddedildi."
+  expired: "<prefix><yellow>Haraç isteğinin süresi doldu."
+
+admin:
+  usage: |
+    <prefix><gold>/townyadmin raids reload
+    <prefix><gold>/townyadmin raids start <attacker> <defender>
+    <prefix><gold>/townyadmin raids end <town>
+    <prefix><gold>/townyadmin raids phase <town> <pending|battle>
+  forced-declare: "<prefix><green><white><attacker></white> ve <white><defender></white> arasında baskın zorla ilan edildi."
+  forced-end: "<prefix><green><white><town></white> içeren baskın zorla sonlandırıldı."
+  forced-phase: "<prefix><green>Baskın <white><phase></white> aşamasına zorla geçirildi."
+  no-raid-for-town: "<prefix><red><white><town></white> içeren aktif bir baskın yok."
+  invalid-phase: "<prefix><red>Bilinmeyen aşama. Geçerli aşamalar: <white>pending, battle</white>."

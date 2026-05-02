@@ -1,0 +1,75 @@
+prefix: "<dark_gray>[<gradient:#ff5e00:#ffbb00>TownyRaids</gradient><dark_gray>]</dark_gray> "
+
+generic:
+  no-permission: "<prefix><red>No tienes permiso para hacer eso."
+  must-be-player: "<prefix><red>Solo los jugadores pueden usar este comando."
+  must-have-town: "<prefix><red>Debes pertenecer a un pueblo para usar este comando."
+  must-be-mayor-or-assistant: "<prefix><red>Solo el alcalde o un asistente pueden usar este comando."
+  rate-limited: "<prefix><red>Espera antes de volver a ejecutar el comando."
+  unknown-town: "<prefix><red>El pueblo <white><town></white> no existe."
+  same-town: "<prefix><red>No puedes atacar tu propio pueblo."
+  reloaded: "<prefix><green>Configuración recargada."
+  reload-failed: "<prefix><red>Error al recargar: <reason>"
+
+raid:
+  confirmation-title: "¿Declarar asalto a <white><defender></white>?"
+  confirmation-sent: "<prefix><yellow>Confirmación enviada. Usa /confirm o /cancel en <seconds>s."
+  already-active: "<prefix><red>Uno de los pueblos ya está implicado en un asalto."
+  attacker-on-cooldown: "<prefix><red>Tu pueblo está en enfriamiento durante <time>."
+  defender-protected: "<prefix><red>El pueblo <white><defender></white> está protegido por <time>."
+  defender-too-small: "<prefix><red>El pueblo <white><defender></white> no tiene suficientes residentes."
+  attacker-too-small: "<prefix><red>Tu pueblo no tiene suficientes residentes para asaltar."
+  same-nation: "<prefix><red>No puedes asaltar a un pueblo de la misma nación."
+  declared-broadcast: "<prefix><red><bold>ASALTO:</bold></red> <gold><attacker></gold> ha declarado un asalto contra <gold><defender></gold>!"
+  preparation-title-attacker:
+    title: "<red>Asalto declarado"
+    subtitle: "<gray>Objetivo: <white><defender></white>"
+  preparation-title-defender:
+    title: "<red>Bajo asalto"
+    subtitle: "<gray>Atacante: <white><attacker></white>"
+  preparation-bossbar: "<yellow>Preparación: <white><time></white> para la batalla"
+  battle-bossbar: "<red>Batalla: <white><time></white> restante"
+  battle-started-broadcast: "<prefix><red>La batalla entre <gold><attacker></gold> y <gold><defender></gold> ha comenzado!"
+  battle-ended-title:
+    title: "<green>Asalto finalizado"
+    subtitle: "<gray><attacker></gray> vs <gray><defender></gray>"
+  battle-ended-broadcast: "<prefix><green>El asalto entre <gold><attacker></gold> y <gold><defender></gold> ha terminado."
+  cancelled-broadcast: "<prefix><yellow>El asalto entre <gold><attacker></gold> y <gold><defender></gold> ha sido cancelado."
+  cancelled-title: "<yellow>Asalto cancelado"
+  not-cancellable-now: "<prefix><red>El asalto ya no puede cancelarse."
+  no-active-raid: "<prefix><red>Tu pueblo no tiene un asalto activo para cancelar."
+  help:
+    header: "<prefix><gold>Comandos de asalto:"
+    declare: "<gray>/t raid <town> <white>- Declarar un asalto contra un pueblo."
+    cancel: "<gray>/t raid cancel <white>- Cancelar tu asalto durante la preparación."
+
+tribute:
+  usage: "<prefix><yellow>/t tribute request <amount> | /t tribute accept | /t tribute deny"
+  disabled: "<prefix><red>El sistema de tributo está desactivado en este servidor."
+  only-attacker-request: "<prefix><red>Solo el pueblo atacante puede solicitar tributo."
+  only-defender-answer: "<prefix><red>Solo el pueblo defensor puede responder al tributo."
+  no-active-raid: "<prefix><red>No hay un asalto activo vinculado a tu pueblo."
+  raid-not-pending: "<prefix><red>El tributo solo puede solicitarse durante la fase de preparación."
+  amount-too-low: "<prefix><red>El tributo debe ser al menos <white><amount></white>."
+  amount-too-high: "<prefix><red>El tributo no puede exceder <white><amount></white>."
+  invalid-amount: "<prefix><red>Cantidad inválida."
+  already-pending: "<prefix><red>Ya hay una solicitud de tributo pendiente."
+  request-sent: "<prefix><green>Solicitud de tributo de <white><amount></white> enviada a <white><defender></white>."
+  request-received: "<prefix><gold><attacker></gold> exige un tributo de <white><amount></white>. Usa /t tribute accept o /t tribute deny."
+  no-pending: "<prefix><red>No hay una solicitud de tributo pendiente."
+  insufficient-funds: "<prefix><red>El banco de tu pueblo no tiene fondos suficientes."
+  accepted: "<prefix><green>Tributo de <white><amount></white> pagado a <attacker>. El asalto ha sido cancelado."
+  denied: "<prefix><yellow>Solicitud de tributo rechazada."
+  expired: "<prefix><yellow>La solicitud de tributo ha caducado."
+
+admin:
+  usage: |
+    <prefix><gold>/townyadmin raids reload
+    <prefix><gold>/townyadmin raids start <attacker> <defender>
+    <prefix><gold>/townyadmin raids end <town>
+    <prefix><gold>/townyadmin raids phase <town> <pending|battle>
+  forced-declare: "<prefix><green>Asalto forzado declarado entre <white><attacker></white> y <white><defender></white>."
+  forced-end: "<prefix><green>Asalto forzado finalizado que implicaba a <white><town></white>."
+  forced-phase: "<prefix><green>Asalto movido forzosamente a la fase <white><phase></white>."
+  no-raid-for-town: "<prefix><red>No hay un asalto activo que implique a <white><town></white>."
+  invalid-phase: "<prefix><red>Fase desconocida. Fases válidas: <white>pending, battle</white>."

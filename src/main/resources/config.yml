@@ -1,0 +1,51 @@
+language: en
+
+timings:
+  preparation-seconds: 300
+  battle-seconds: 900
+  attacker-cooldown-seconds: 86400
+  defender-protection-seconds: 172800
+  tribute-request-seconds: 120
+  confirmation-seconds: 30
+
+requirements:
+  defender-min-residents: 3
+  attacker-min-residents: 3
+  require-different-nations: true
+  block-declaring-while-under-raid: true
+
+battle-flags:
+  pvp: true
+  explosion: true
+  fire: true
+  mobs: true
+
+tribute:
+  enabled: true
+  min-amount: 100.0
+  max-amount: 0.0
+
+bossbar:
+  preparation:
+    color: YELLOW
+    overlay: PROGRESS
+  battle:
+    color: RED
+    overlay: NOTCHED_10
+
+storage:
+  type: sqlite
+  sqlite-file: "storage.db"
+  mysql:
+    host: localhost
+    port: 3306
+    database: townyraids
+    username: townyraids
+    password: changeme
+    use-ssl: false
+    pool-size: 6
+
+runtime:
+  restore-flags-on-shutdown: true
+  lenient-restore: true
+  command-rate-limit-seconds: 2

@@ -1,0 +1,75 @@
+prefix: "<dark_gray>[<gradient:#ff5e00:#ffbb00>TownyRaids</gradient><dark_gray>]</dark_gray> "
+
+generic:
+  no-permission: "<prefix><red>У вас нет прав для этого действия."
+  must-be-player: "<prefix><red>Команду может использовать только игрок."
+  must-have-town: "<prefix><red>Вы должны состоять в городе, чтобы использовать эту команду."
+  must-be-mayor-or-assistant: "<prefix><red>Эту команду может использовать только мэр или его помощник."
+  rate-limited: "<prefix><red>Подождите перед следующим использованием команды."
+  unknown-town: "<prefix><red>Город <white><town></white> не существует."
+  same-town: "<prefix><red>Вы не можете объявить рейд на свой город."
+  reloaded: "<prefix><green>Конфигурация перезагружена."
+  reload-failed: "<prefix><red>Ошибка перезагрузки: <reason>"
+
+raid:
+  confirmation-title: "Объявить рейд на <white><defender></white>?"
+  confirmation-sent: "<prefix><yellow>Запрос подтверждения отправлен. Введите /confirm или /cancel в течение <seconds>с."
+  already-active: "<prefix><red>Один из городов уже участвует в рейде."
+  attacker-on-cooldown: "<prefix><red>Ваш город на кулдауне рейдов ещё <time>."
+  defender-protected: "<prefix><red>Город <white><defender></white> защищён ещё <time>."
+  defender-too-small: "<prefix><red>В городе <white><defender></white> недостаточно жителей."
+  attacker-too-small: "<prefix><red>В вашем городе недостаточно жителей для объявления рейда."
+  same-nation: "<prefix><red>Нельзя объявить рейд на город из той же нации."
+  declared-broadcast: "<prefix><red><bold>РЕЙД:</bold></red> <gold><attacker></gold> объявил рейд на <gold><defender></gold>!"
+  preparation-title-attacker:
+    title: "<red>Рейд объявлен"
+    subtitle: "<gray>Цель: <white><defender></white>"
+  preparation-title-defender:
+    title: "<red>Вас рейдят"
+    subtitle: "<gray>Нападающий: <white><attacker></white>"
+  preparation-bossbar: "<yellow>Подготовка: <white><time></white> до начала битвы"
+  battle-bossbar: "<red>Битва: осталось <white><time></white>"
+  battle-started-broadcast: "<prefix><red>Битва между <gold><attacker></gold> и <gold><defender></gold> началась!"
+  battle-ended-title:
+    title: "<green>Рейд завершён"
+    subtitle: "<gray><attacker></gray> против <gray><defender></gray>"
+  battle-ended-broadcast: "<prefix><green>Рейд между <gold><attacker></gold> и <gold><defender></gold> завершён."
+  cancelled-broadcast: "<prefix><yellow>Рейд между <gold><attacker></gold> и <gold><defender></gold> отменён."
+  cancelled-title: "<yellow>Рейд отменён"
+  not-cancellable-now: "<prefix><red>Рейд больше нельзя отменить."
+  no-active-raid: "<prefix><red>У вашего города нет активного рейда для отмены."
+  help:
+    header: "<prefix><gold>Команды рейдов:"
+    declare: "<gray>/t raid <town> <white>- Объявить рейд на город."
+    cancel: "<gray>/t raid cancel <white>- Отменить рейд на фазе подготовки."
+
+tribute:
+  usage: "<prefix><yellow>/t tribute request <amount> | /t tribute accept | /t tribute deny"
+  disabled: "<prefix><red>Система дани отключена на этом сервере."
+  only-attacker-request: "<prefix><red>Только нападающий город может запросить дань."
+  only-defender-answer: "<prefix><red>Только обороняющийся город может ответить на запрос дани."
+  no-active-raid: "<prefix><red>С вашим городом не связан активный рейд."
+  raid-not-pending: "<prefix><red>Дань можно запросить только во время фазы подготовки."
+  amount-too-low: "<prefix><red>Дань должна быть не меньше <white><amount></white>."
+  amount-too-high: "<prefix><red>Дань не может превышать <white><amount></white>."
+  invalid-amount: "<prefix><red>Некорректная сумма."
+  already-pending: "<prefix><red>Запрос дани уже отправлен."
+  request-sent: "<prefix><green>Запрос дани на <white><amount></white> отправлен городу <white><defender></white>."
+  request-received: "<prefix><gold><attacker></gold> требует дань в размере <white><amount></white>. Используйте /t tribute accept или /t tribute deny."
+  no-pending: "<prefix><red>Нет ожидающего запроса дани."
+  insufficient-funds: "<prefix><red>В казне вашего города недостаточно средств."
+  accepted: "<prefix><green>Дань в размере <white><amount></white> выплачена городу <attacker>. Рейд отменён."
+  denied: "<prefix><yellow>Запрос дани отклонён."
+  expired: "<prefix><yellow>Срок действия запроса дани истёк."
+
+admin:
+  usage: |
+    <prefix><gold>/townyadmin raids reload
+    <prefix><gold>/townyadmin raids start <attacker> <defender>
+    <prefix><gold>/townyadmin raids end <town>
+    <prefix><gold>/townyadmin raids phase <town> <pending|battle>
+  forced-declare: "<prefix><green>Принудительно объявлен рейд между <white><attacker></white> и <white><defender></white>."
+  forced-end: "<prefix><green>Принудительно завершён рейд с участием <white><town></white>."
+  forced-phase: "<prefix><green>Рейд принудительно переведён в фазу <white><phase></white>."
+  no-raid-for-town: "<prefix><red>Нет активного рейда с участием города <white><town></white>."
+  invalid-phase: "<prefix><red>Неизвестная фаза. Доступные: <white>pending, battle</white>."

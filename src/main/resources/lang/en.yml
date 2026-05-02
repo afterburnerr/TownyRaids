@@ -1,0 +1,75 @@
+prefix: "<dark_gray>[<gradient:#ff5e00:#ffbb00>TownyRaids</gradient><dark_gray>]</dark_gray> "
+
+generic:
+  no-permission: "<prefix><red>You do not have permission to do that."
+  must-be-player: "<prefix><red>Only players can run this command."
+  must-have-town: "<prefix><red>You must belong to a town to use this command."
+  must-be-mayor-or-assistant: "<prefix><red>Only the mayor or an assistant can use this command."
+  rate-limited: "<prefix><red>Please wait before running that command again."
+  unknown-town: "<prefix><red>Town <white><town></white> does not exist."
+  same-town: "<prefix><red>You cannot raid your own town."
+  reloaded: "<prefix><green>Configuration reloaded."
+  reload-failed: "<prefix><red>Reload failed: <reason>"
+
+raid:
+  confirmation-title: "Declare raid on <white><defender></white>?"
+  confirmation-sent: "<prefix><yellow>Confirmation sent. Type /confirm or /cancel within <seconds>s."
+  already-active: "<prefix><red>A raid involving one of these towns is already running."
+  attacker-on-cooldown: "<prefix><red>Your town is on raid cooldown for <time>."
+  defender-protected: "<prefix><red>Town <white><defender></white> is still protected for <time>."
+  defender-too-small: "<prefix><red>Town <white><defender></white> does not have enough residents."
+  attacker-too-small: "<prefix><red>Your town does not have enough residents to declare a raid."
+  same-nation: "<prefix><red>You cannot raid a town from the same nation."
+  declared-broadcast: "<prefix><red><bold>RAID:</bold></red> <gold><attacker></gold> has declared a raid on <gold><defender></gold>!"
+  preparation-title-attacker:
+    title: "<red>Raid declared"
+    subtitle: "<gray>Target: <white><defender></white>"
+  preparation-title-defender:
+    title: "<red>Under raid"
+    subtitle: "<gray>Attacker: <white><attacker></white>"
+  preparation-bossbar: "<yellow>Preparation: <white><time></white> until battle begins"
+  battle-bossbar: "<red>Battle: <white><time></white> remaining"
+  battle-started-broadcast: "<prefix><red>The battle between <gold><attacker></gold> and <gold><defender></gold> has begun!"
+  battle-ended-title:
+    title: "<green>Raid ended"
+    subtitle: "<gray><attacker></gray> vs <gray><defender></gray>"
+  battle-ended-broadcast: "<prefix><green>The raid between <gold><attacker></gold> and <gold><defender></gold> has ended."
+  cancelled-broadcast: "<prefix><yellow>The raid between <gold><attacker></gold> and <gold><defender></gold> has been cancelled."
+  cancelled-title: "<yellow>Raid cancelled"
+  not-cancellable-now: "<prefix><red>The raid can no longer be cancelled."
+  no-active-raid: "<prefix><red>Your town does not have an active raid to cancel."
+  help:
+    header: "<prefix><gold>Raid commands:"
+    declare: "<gray>/t raid <town> <white>- Declare a raid on a town."
+    cancel: "<gray>/t raid cancel <white>- Cancel your raid during preparation."
+
+tribute:
+  usage: "<prefix><yellow>/t tribute request <amount> | /t tribute accept | /t tribute deny"
+  disabled: "<prefix><red>The tribute system is disabled on this server."
+  only-attacker-request: "<prefix><red>Only the attacking town can request tribute."
+  only-defender-answer: "<prefix><red>Only the defending town can answer a tribute request."
+  no-active-raid: "<prefix><red>There is no active raid linked to your town."
+  raid-not-pending: "<prefix><red>Tribute can only be requested during the preparation phase."
+  amount-too-low: "<prefix><red>Tribute must be at least <white><amount></white>."
+  amount-too-high: "<prefix><red>Tribute may not exceed <white><amount></white>."
+  invalid-amount: "<prefix><red>Invalid amount."
+  already-pending: "<prefix><red>A tribute request is already pending."
+  request-sent: "<prefix><green>Tribute request of <white><amount></white> sent to <white><defender></white>."
+  request-received: "<prefix><gold><attacker></gold> demands a tribute of <white><amount></white>. Use /t tribute accept or /t tribute deny."
+  no-pending: "<prefix><red>There is no pending tribute request."
+  insufficient-funds: "<prefix><red>Your town bank does not have enough funds."
+  accepted: "<prefix><green>Tribute of <white><amount></white> paid to <attacker>. The raid has been cancelled."
+  denied: "<prefix><yellow>Tribute request denied."
+  expired: "<prefix><yellow>The tribute request has expired."
+
+admin:
+  usage: |
+    <prefix><gold>/townyadmin raids reload
+    <prefix><gold>/townyadmin raids start <attacker> <defender>
+    <prefix><gold>/townyadmin raids end <town>
+    <prefix><gold>/townyadmin raids phase <town> <pending|battle>
+  forced-declare: "<prefix><green>Forcefully declared a raid between <white><attacker></white> and <white><defender></white>."
+  forced-end: "<prefix><green>Forcefully ended the raid involving <white><town></white>."
+  forced-phase: "<prefix><green>Forcefully moved the raid to <white><phase></white>."
+  no-raid-for-town: "<prefix><red>There is no active raid involving <white><town></white>."
+  invalid-phase: "<prefix><red>Unknown phase. Valid phases: <white>pending, battle</white>."

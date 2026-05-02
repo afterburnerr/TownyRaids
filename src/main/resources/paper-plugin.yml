@@ -1,0 +1,35 @@
+name: TownyRaids
+version: '${version}'
+main: gg.afterburner.townyRaids.TownyRaids
+api-version: '1.21'
+load: POSTWORLD
+author: afterburner
+description: Addon for Towny that adds a full-featured raid system between towns.
+website: https://github.com/afterburner-gg/TownyRaids
+
+dependencies:
+  server:
+    Towny:
+      load: BEFORE
+      required: true
+      join-classpath: true
+
+permissions:
+  townyraids.raid.declare:
+    default: op
+  townyraids.raid.cancel:
+    default: op
+  townyraids.tribute.request:
+    default: op
+  townyraids.tribute.accept:
+    default: op
+  townyraids.admin:
+    default: op
+  townyraids.admin.reload:
+    default: op
+  townyraids.admin.force-start:
+    default: op
+  townyraids.admin.force-end:
+    default: op
+  townyraids.admin.force-phase:
+    default: op
