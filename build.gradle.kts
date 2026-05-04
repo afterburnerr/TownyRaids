@@ -42,7 +42,6 @@ tasks {
     shadowJar {
         archiveClassifier.set("")
         relocate("com.zaxxer.hikari", "gg.afterburner.townyRaids.libs.hikari")
-        relocate("org.sqlite", "gg.afterburner.townyRaids.libs.sqlite")
         relocate("org.slf4j", "gg.afterburner.townyRaids.libs.slf4j")
         mergeServiceFiles()
     }
